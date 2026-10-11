@@ -1,0 +1,9 @@
+﻿# bcd_conv simulation log
+# date: 2026-10-11 13:40:40
+# tool: Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+# command: run_sim.bat bcd_conv
+=== iverilog compile: bcd_conv ===
+=== vvp run ===
+VCD info: dumpfile bcd_conv.vcd opened for output.
+PASS BCD: 100 valid and 156 invalid inputs
+tb_bcd_conv.sv:17: $finish called at 256000 (1ps)

@@ -1,0 +1,9 @@
+﻿# mult_4bit simulation log
+# date: 2026-10-11 13:40:40
+# tool: Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+# command: run_sim.bat mult_4bit
+=== iverilog compile: mult_4bit ===
+=== vvp run ===
+VCD info: dumpfile mult_4bit.vcd opened for output.
+PASS multiplier: 256 input pairs
+tb_mult_4bit.sv:15: $finish called at 256000 (1ps)

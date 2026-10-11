@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "SIM: 4비트 곱셈기 (mult_4bit)",
+            "type": "process",
+            "command": "cmd.exe",
+            "args": ["/d", "/c", "run_sim.bat", "mult_4bit", "wave"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "SIM: BCD를 이진수로 변환 (bcd_conv)",
+            "type": "process",
+            "command": "cmd.exe",
+            "args": ["/d", "/c", "run_sim.bat", "bcd_conv", "wave"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": "test",
+            "problemMatcher": []
+        }
+    ]
+}

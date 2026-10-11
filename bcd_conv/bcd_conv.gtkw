@@ -1,0 +1,9 @@
+[dumpfile] "bcd_conv.vcd"
+[timestart] 0
+[size] 1400 600
+@24
+tb.ten[3:0]
+tb.one[3:0]
+tb.bin[6:0]
+@28
+tb.valid

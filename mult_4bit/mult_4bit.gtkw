@@ -1,0 +1,7 @@
+[dumpfile] "mult_4bit.vcd"
+[timestart] 0
+[size] 1400 600
+@24
+tb.a[3:0]
+tb.b[3:0]
+tb.m[7:0]
