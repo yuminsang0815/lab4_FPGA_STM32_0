@@ -1,3 +1,8 @@
 # 시뮬레이션 빌드 산출물 (run_sim.bat 실행 시 다시 생성됨)
 *.vvp
 *.vcd
+
+# Vivado 프로젝트·빌드 산출물 (tools/vivado_build.tcl로 다시 생성)
+/vivado/
+.Xil/
+*.jou

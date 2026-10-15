@@ -83,22 +83,22 @@ STM32_0 주차의 FPGA 교재 실습으로, 클록 없이 입력이 바뀌면 �
 실행 환경: Windows 11, Icarus Verilog 12.0 (devel), GTKWave, VS Code `Tasks: Run Task` (`run_sim.bat`).
 
 ### 정상 시뮬레이션 확인 – 4비트 곱셈기
-- **[종료 로그](../../evidence/mult_4bit_sim_log.txt)**: `PASS multiplier: 256 input pairs`, 종료 시각 `256000 ps (256 ns)`
-- **[전체 파형](../../evidence/mult_4bit_wave_full.png)**, **[확대 파형](../../evidence/mult_4bit_wave_zoom.png)**:
+- **[종료 로그](../../evidence/vscode/mult_4bit_sim_log.txt)**: `PASS multiplier: 256 input pairs`, 종료 시각 `256000 ps (256 ns)`
+- **[전체 파형](../../evidence/vscode/mult_4bit_wave_full.png)**, **[확대 파형](../../evidence/vscode/mult_4bit_wave_zoom.png)**:
   - 240 ns에서 `a`가 14 → 15로 바뀌고 `b`가 0부터 1 ns마다 1씩 증가한다.
   - `m`은 0, 15, 30, 45, … , 210, 225로 15씩 증가하며, 255를 넘지 않고 8비트 안에서 정확히 표현됨을 확인했다.
   - 조합회로이므로 입력이 바뀐 시각과 같은 시각에 출력이 바뀐다(클록 지연 없음).
 
-![4비트 곱셈기 확대 파형](../../evidence/mult_4bit_wave_zoom.png)
+![4비트 곱셈기 확대 파형](../../evidence/vscode/mult_4bit_wave_zoom.png)
 
 ### 정상 시뮬레이션 확인 – BCD-이진수 변환기
-- **[종료 로그](../../evidence/bcd_conv_sim_log.txt)**: `PASS BCD: 100 valid and 156 invalid inputs`, 종료 시각 `256000 ps (256 ns)`
-- **[전체 파형](../../evidence/bcd_conv_wave_full.png)**, **[확대 파형](../../evidence/bcd_conv_wave_zoom.png)**:
+- **[종료 로그](../../evidence/vscode/bcd_conv_sim_log.txt)**: `PASS BCD: 100 valid and 156 invalid inputs`, 종료 시각 `256000 ps (256 ns)`
+- **[전체 파형](../../evidence/vscode/bcd_conv_wave_full.png)**, **[확대 파형](../../evidence/vscode/bcd_conv_wave_zoom.png)**:
   - 전체 파형에서 `ten=0~9` 구간마다 `valid`가 10 ns 동안 1, 6 ns 동안 0을 반복하고, `ten`이 10 이상이 된 160 ns 이후에는 계속 0이다.
   - `ten=9` 구간에서 `one=0~9`일 때 `bin=90~99`, `valid=1`이며, `one=10`이 되는 154 ns에 `valid`가 0으로 떨어진다.
   - `ten=10`, `one=0`(160 ns)에서 `bin=100`이 출력되지만 `valid=0`이므로 무효 값으로 처리됨을 확인했다.
 
-![BCD 변환기 확대 파형](../../evidence/bcd_conv_wave_zoom.png)
+![BCD 변환기 확대 파형](../../evidence/vscode/bcd_conv_wave_zoom.png)
 
 ### 수정 실험 (오류 주입 및 복구)
 원본 폴더를 건드리지 않도록 임시 사본에서 설계 코드 한 줄씩을 고의로 바꿔, 테스트벤치가 오류를 실제로 검출하는지 확인했다.

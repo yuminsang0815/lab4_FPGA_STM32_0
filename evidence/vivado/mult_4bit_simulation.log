@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+PASS multiplier: 256 input pairs
+$finish called at time : 256 ns : File "C:/Users/a2391/lab4_FPGA_STM32_0/mult_4bit/tb_mult_4bit.sv" Line 15
